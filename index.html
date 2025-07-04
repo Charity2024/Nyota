@@ -121,9 +121,17 @@
       0% { transform: scale(0.5); opacity: 1; }
       100% { transform: scale(3); opacity: 0; }
     }
-    .focus-card {
-    background-color: #0f1e2b;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+   .focus-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(160, 73, 32, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    z-index: 1;
   }
   .focus-card:hover {
     transform: translateY(-10px);
@@ -161,10 +169,10 @@
   </section>
 
   <!-- Focus Areas -->
-<section class="section bg-dark position-relative overflow-hidden" style="background: linear-gradient(to bottom right, #010D17, #0d1b26);">
+<section class="section bg-dark position-relative overflow-hidden" style="background: linear-gradient(to bottom , #010D17, #0d1b26);">
   <canvas id="galaxy-canvas" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:0;"></canvas>
   <div class="container position-relative" style="z-index:1;">
-    <h2 class="text-center mb-5" style="color: #FFD700; font-family: 'Orbitron', sans-serif;">Key Focus Areas</h2>
+    <h2 class="text-center mb-5 " style="color: #FFD700; font-family: 'Orbitron', sans-serif;">Key Focus Areas</h2>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="card p-4 text-center shadow-lg border border-secondary-subtle focus-card">
