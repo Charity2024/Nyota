@@ -26,7 +26,7 @@
       position: relative;
     }
     .hero img {
-      width: 120px;
+      width: 170px;
       animation: float 3s ease-in-out infinite;
     }
     .btn-gold {
@@ -121,6 +121,24 @@
       0% { transform: scale(0.5); opacity: 1; }
       100% { transform: scale(3); opacity: 0; }
     }
+    .focus-card {
+    background-color: #0f1e2b;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .focus-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+  }
+  .icon-animate {
+    transition: transform 0.3s ease;
+  }
+  .focus-card:hover .icon-animate {
+    transform: scale(1.2) rotate(8deg);
+  }
+  .hover-glow:hover {
+    background-color: rgba(255, 215, 0, 0.05);
+    transition: background-color 0.3s;
+  }
   </style>
 </head>
 <body>
@@ -143,99 +161,122 @@
   </section>
 
   <!-- Focus Areas -->
-  <section class="section bg-dark">
-    <div class="container">
-      <h2 class="text-center mb-5">Key Focus Areas</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card p-4">
-            <h5>🚀 Rocket Development</h5>
-            <p>Building scalable and efficient launch systems.</p>
+<section class="section bg-dark position-relative overflow-hidden" style="background: linear-gradient(to bottom right, #010D17, #0d1b26);">
+  <canvas id="galaxy-canvas" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:0;"></canvas>
+  <div class="container position-relative" style="z-index:1;">
+    <h2 class="text-center mb-5" style="color: #FFD700; font-family: 'Orbitron', sans-serif;">Key Focus Areas</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-4 text-center shadow-lg border border-secondary-subtle focus-card">
+          <div class="mb-3">
+            <i class="fas fa-rocket fa-3x icon-animate"></i>
           </div>
+          <h5 class="mb-2">Rocket Development</h5>
+          <p>Building scalable and efficient launch systems.</p>
         </div>
-        <div class="col-md-4">
-          <div class="card p-4">
-            <h5>🛰️ Satellite Technology</h5>
-            <p>Developing satellite solutions for communication and research.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 text-center shadow-lg border border-secondary-subtle focus-card">
+          <div class="mb-3">
+            <i class="fas fa-satellite fa-3x icon-animate"></i>
           </div>
+          <h5 class="mb-2">Satellite Technology</h5>
+          <p>Developing satellite solutions for communication and research.</p>
         </div>
-        <div class="col-md-4">
-          <div class="card p-4">
-            <h5>🔬 R&D</h5>
-            <p>Advancing aerospace technology through innovation.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 text-center shadow-lg border border-secondary-subtle focus-card">
+          <div class="mb-3">
+            <i class="fas fa-flask fa-3x icon-animate"></i>
           </div>
+          <h5 class="mb-2">Research & Development</h5>
+          <p>Advancing aerospace technology through innovation.</p>
         </div>
-        <div class="col-md-4">
-          <div class="card p-4">
-            <h5>🎓 Education & Workforce</h5>
-            <p>Opportunities for young African scientists and engineers.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 text-center shadow-lg border border-secondary-subtle focus-card">
+          <div class="mb-3">
+            <i class="fas fa-user-graduate fa-3x icon-animate"></i>
           </div>
+          <h5 class="mb-2">Education & Workforce</h5>
+          <p>Opportunities for young African scientists and engineers.</p>
         </div>
-        <div class="col-md-4">
-          <div class="card p-4">
-            <h5>🌍 International Collaboration</h5>
-            <p>Partnering with global space agencies and private firms.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 text-center shadow-lg border border-secondary-subtle focus-card">
+          <div class="mb-3">
+            <i class="fas fa-globe-africa fa-3x icon-animate"></i>
           </div>
+          <h5 class="mb-2">International Collaboration</h5>
+          <p>Partnering with global space agencies and private firms.</p>
         </div>
-        <div class="col-md-4">
-          <div class="card p-4">
-            <h5>✨ Astrotourism</h5>
-            <p>Exploring new tourism possibilities among the stars.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-4 text-center shadow-lg border border-secondary-subtle focus-card">
+          <div class="mb-3">
+            <i class="fas fa-meteor fa-3x icon-animate"></i>
           </div>
+          <h5 class="mb-2">Astrotourism</h5>
+          <p>Exploring new tourism possibilities among the stars.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Brand Colors -->
-  <section class="section">
-    <div class="container">
-      <h2 class="text-center mb-4">Brand Colors</h2>
-      <div class="row text-center">
-        <div class="col">
-          <div class="color-block" style="background-color: #010D17;"></div>
-          <p>Cosmic Midnight</p>
-        </div>
-        <div class="col">
-          <div class="color-block" style="background-color: #FFFFFF; border: 1px solid #ccc;"></div>
-          <p>Star White</p>
-        </div>
-        <div class="col">
-          <div class="color-block" style="background-color: #FFD700;"></div>
-          <p>Galaxy Gold</p>
-        </div>
-        <div class="col">
-          <div class="color-block" style="background-color: #A04920;"></div>
-          <p>Terracotta Pulse</p>
-        </div>
-        <div class="col">
-          <div class="color-block" style="background-color: #1E5F9D;"></div>
-          <p>Orbital Blue</p>
-        </div>
+ <!-- Brand Colors -->
+<section class="section" style="background: radial-gradient(circle at top, #0d1b26, #010D17); color: #ffffff;">
+  <div class="container">
+    <h2 class="text-center mb-4" style="color: #FFD700; font-family: 'Orbitron', sans-serif;">Brand Colors</h2>
+    <div class="row text-center g-3">
+      <div class="col">
+        <div class="color-block mx-auto mb-2 shadow-sm" style="background-color: #010D17;"></div>
+        <p class="fw-semibold">Cosmic Midnight</p>
+      </div>
+      <div class="col">
+        <div class="color-block mx-auto mb-2 shadow-sm" style="background-color: #FFFFFF; border: 1px solid #ccc;"></div>
+        <p class="fw-semibold">Star White</p>
+      </div>
+      <div class="col">
+        <div class="color-block mx-auto mb-2 shadow-sm" style="background-color: #FFD700;"></div>
+        <p class="fw-semibold">Galaxy Gold</p>
+      </div>
+      <div class="col">
+        <div class="color-block mx-auto mb-2 shadow-sm" style="background-color: #A04920;"></div>
+        <p class="fw-semibold">Terracotta Pulse</p>
+      </div>
+      <div class="col">
+        <div class="color-block mx-auto mb-2 shadow-sm" style="background-color: #1E5F9D;"></div>
+        <p class="fw-semibold">Orbital Blue</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Next Steps -->
-  <section class="section bg-dark">
-    <div class="container">
-      <h2 class="text-center mb-4">Next Steps</h2>
-      <ul>
-        <li>Establish a research and development team</li>
-        <li>Develop a model rocket as a proof of concept</li>
-        <li>Secure partnerships and funding opportunities</li>
-        <li>Launch awareness campaigns and outreach programs</li>
-      </ul>
+<section class="section bg-dark" style="background: linear-gradient(to top right, #0a1a28, #010D17); color: #ffffff;">
+  <div class="container">
+    <h2 class="text-center mb-4" style="color: #FFD700; font-family: 'Orbitron', sans-serif;">Next Steps</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item bg-transparent border-light text-white hover-glow"><i class="fas fa-users me-2 text-warning"></i> Establish a research and development team</li>
+          <li class="list-group-item bg-transparent border-light text-white hover-glow"><i class="fas fa-rocket me-2 text-warning"></i> Develop a model rocket as a proof of concept</li>
+          <li class="list-group-item bg-transparent border-light text-white hover-glow"><i class="fas fa-handshake me-2 text-warning"></i> Secure partnerships and funding opportunities</li>
+          <li class="list-group-item bg-transparent border-light text-white hover-glow"><i class="fas fa-bullhorn me-2 text-warning"></i> Launch awareness campaigns and outreach programs</li>
+        </ul>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 Nyota Spaceworks • Africa Beyond the Stars</p>
     <div class="social-icons">
-      <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://linkedin.com/in/yourhandle" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/char_lito20__" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://linkedin.com/in/char_lito20__" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com/char_lito20__" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="mailto:contact@nyotaspaceworks.africa"><i class="fas fa-envelope"></i></a>
     </div>
   </footer>
@@ -257,10 +298,45 @@
       const star = document.createElement("div");
       star.className = "galaxy-star";
       star.style.left = Math.random() * window.innerWidth + "px";
-      star.style.top = Math.random() * window.innerHeight + "px";
+      star.style.top = Math.random() * window.outerHeight + "px";
       star.style.animationDuration = (10 + Math.random() * 10) + "s";
       document.body.appendChild(star);
     }
+
+     // Galaxy particle background
+  const canvas = document.getElementById('galaxy-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight / 1.5;
+
+  const stars = [];
+  for (let i = 0; i < 100; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 1.5,
+      alpha: Math.random(),
+      dx: (Math.random() - 0.5) * 0.5,
+      dy: (Math.random() - 0.5) * 0.5
+    });
+  }
+
+  function animateStars() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars.forEach(star => {
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+      ctx.fill();
+      star.x += star.dx;
+      star.y += star.dy;
+      if (star.x < 0 || star.x > canvas.width) star.dx *= -1;
+      if (star.y < 0 || star.y > canvas.height) star.dy *= -1;
+    });
+    requestAnimationFrame(animateStars);
+  }
+
+  animateStars();
   </script>
 </body>
 </html>
