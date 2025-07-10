@@ -14,7 +14,21 @@
       font-family: 'Montserrat', sans-serif;
       overflow-x: hidden;
       cursor: none;
+      overflow-x: hidden;
+      contain: layout;
     }
+#galaxy-canvas,
+#custom-cursor,
+.trail {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
     #custom-cursor {
     position: fixed;
     top: 0;
